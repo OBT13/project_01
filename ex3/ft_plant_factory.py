@@ -9,12 +9,14 @@ class Plant:
 
 
 if __name__ == "__main__":
+    # Create instances of the Plant class
     rose = Plant("Rose", 25, 30)
     oak = Plant("Oak", 200, 365)
     cactus = Plant("Cactus", 5, 90)
     sunflower = Plant("Sunflower", 80, 45)
     fern = Plant("Fern", 15, 120)
 
+    # Display information about each plant
     print("=== Plant Factory Output ===")
     rose.display_info()
     oak.display_info()
@@ -23,4 +25,5 @@ if __name__ == "__main__":
     fern.display_info()
 
 
+    # Display the total number of plants created
     print("\nTotal plants created: 5")

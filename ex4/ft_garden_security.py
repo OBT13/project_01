@@ -6,7 +6,7 @@ class GardenSecurity:
     def set_height(self, height):
         if(height >= 0):
             self._height = height
-            print(f"Height updated: {self._height}cm [OK]\n")
+            print(f"Height updated: {self._height}cm [OK]")
         else:
             print("Security: Negative height rejected\n")
 
@@ -16,7 +16,7 @@ class GardenSecurity:
     def set_age(self, age):
         if(age >= 0):
             self._age = age
-            print(f"Age updated: {self._age} days [OK]")
+            print(f"Age updated: {self._age} days [OK]\n")
         else:
             print("Security: Negative age rejected\n")
     def get_age(self):
@@ -27,15 +27,20 @@ class GardenSecurity:
 if __name__ == "__main__":
     print("=== Garden Security System ===")
 
+    # Create a plant object named "Rose" with initial height and age
     plant = GardenSecurity("Rose",88,77)
     print(f"Plant created: {plant.name}")
 
-    plant.set_age(30)
+    # Update plant's age and height with valid values
     plant.set_height(25)
+    plant.set_age(30)
+    
 
 
+    # Attempt to set an invalid height value (negative)
     print("Invalid operation attempted: height -5cm [REJECTED]")
     plant.set_height(-5)
 
+    # Display current plant information
     plant.display_info()
     

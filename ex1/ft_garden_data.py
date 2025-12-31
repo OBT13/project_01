@@ -5,10 +5,11 @@ class Plant:
         self.age = age
       
         
-
+# Creating instances of the Plant class
 rose = Plant("Rose",25,30)
 sunflower = Plant("Sunflower",80,45)
 cactus = Plant("Cactus",15,120)
+# Printing plant details
 print("=== Garden Plant Registry ===")
 print(f"{rose.name}: {rose.height}cm, {rose.age} days old")
 print(f"{sunflower.name}: {sunflower.height}cm, {sunflower.age} days old")

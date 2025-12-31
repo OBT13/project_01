@@ -38,6 +38,7 @@ class Vegetable(Plant):
 if __name__ == "__main__":
     print("=== Garden Plant Types ===\n")
 
+    # Create instances of various plants
     rose = Flower("Rose", 25, 30, "red")
     tulip = Flower("Tulip", 20, 25, "yellow")
 
@@ -47,18 +48,21 @@ if __name__ == "__main__":
     tomato = Vegetable("Tomato", 80, 90, "summer", "vitamin C")
     carrot = Vegetable("Carrot", 30, 70, "winter", "vitamin A")
 
+    # Display flower information and behavior
     print(f"{rose.name} (Flower): {rose.height}cm, {rose.age} days, {rose.color} color")
     rose.bloom()
 
     print(f"{tulip.name} (Flower): {tulip.height}cm, {tulip.age} days, {tulip.color} color")
     tulip.bloom()
 
+    # Display tree information and behavior
     print(f"{oak.name} (Tree): {oak.height}cm, {oak.age} days, {oak.trunk_diameter}cm diameter")
     oak.produce_shade()
 
     print(f"{pine.name} (Tree): {pine.height}cm, {pine.age} days, {pine.trunk_diameter}cm diameter")
     pine.produce_shade()
 
+    # Display vegetable information and nutritional value
     print(f"{tomato.name} (Vegetable): {tomato.height}cm, {tomato.age} days, {tomato.harvest_season} harvest")
     tomato.get_nutritional_value()
 
