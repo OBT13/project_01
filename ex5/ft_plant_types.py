@@ -4,6 +4,7 @@ class Plant:
         self.height = height
         self.age = age
 
+
 class Flower(Plant):
     def __init__(self, name, height, age, color):
         super().__init__(name, height, age)
@@ -11,10 +12,10 @@ class Flower(Plant):
 
     def bloom(self):
         print(f"{self.name}  is blooming beautifully!\n")
-    
+
 
 class Tree(Plant):
-    def __init__(self, name, height, age,trunk_diameter):
+    def __init__(self, name, height, age, trunk_diameter):
         super().__init__(name, height, age)
         self.trunk_diameter = trunk_diameter
 
@@ -22,17 +23,16 @@ class Tree(Plant):
         shade = self.trunk_diameter * 1.56
         print(f"{self.name} provides {int(shade)} square meters of shade\n")
 
-    
 
 class Vegetable(Plant):
-    def __init__(self, name, height, age,harvest_season,nutritional_value):
+    def __init__(self, name, height, age, harvest_season, nutritional_value):
         super().__init__(name, height, age)
         self.harvest_season = harvest_season
         self.nutritional_value = nutritional_value
+
     def get_nutritional_value(self):
-        print(f"{self.name} is rich in {self.nutritional_value}\n")
-
-
+        print(f"{self.name} is rich in"
+              "{self.nutritional_value}\n")
 
 
 if __name__ == "__main__":
@@ -49,22 +49,38 @@ if __name__ == "__main__":
     carrot = Vegetable("Carrot", 30, 70, "winter", "vitamin A")
 
     # Display flower information and behavior
-    print(f"{rose.name} (Flower): {rose.height}cm, {rose.age} days, {rose.color} color")
+    print(f"{rose.name} (Flower): {rose.height}cm, "
+          f"{rose.age} days, {rose.color} color")
     rose.bloom()
 
-    print(f"{tulip.name} (Flower): {tulip.height}cm, {tulip.age} days, {tulip.color} color")
+    print(
+        f"{tulip.name} (Flower): {tulip.height}cm, "
+        f"{tulip.age} days, {tulip.color} color"
+    )
     tulip.bloom()
 
     # Display tree information and behavior
-    print(f"{oak.name} (Tree): {oak.height}cm, {oak.age} days, {oak.trunk_diameter}cm diameter")
+    print(
+        f"{oak.name} (Tree): {oak.height}cm, {oak.age} days, "
+        f"{oak.trunk_diameter}cm diameter"
+    )
     oak.produce_shade()
 
-    print(f"{pine.name} (Tree): {pine.height}cm, {pine.age} days, {pine.trunk_diameter}cm diameter")
+    print(
+        f"{pine.name} (Tree): {pine.height}cm, {pine.age} days, "
+        f"{pine.trunk_diameter}cm diameter"
+    )
     pine.produce_shade()
 
     # Display vegetable information and nutritional value
-    print(f"{tomato.name} (Vegetable): {tomato.height}cm, {tomato.age} days, {tomato.harvest_season} harvest")
+    print(
+        f"{tomato.name} (Vegetable): {tomato.height}cm, {tomato.age} days, "
+        f"{tomato.harvest_season} harvest"
+    )
     tomato.get_nutritional_value()
 
-    print(f"{carrot.name} (Vegetable): {carrot.height}cm, {carrot.age} days, {carrot.harvest_season} harvest")
+    print(
+        f"{carrot.name} (Vegetable): {carrot.height}cm, {carrot.age} days, "
+        f"{carrot.harvest_season} harvest"
+    )
     carrot.get_nutritional_value()

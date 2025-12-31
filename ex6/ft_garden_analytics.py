@@ -29,7 +29,7 @@ class GardenManager:
     garden_count = 0
 
     class GardenStats:
-      
+
         def total_growth(plants):
             return sum(p.height - p.initial_height for p in plants)
 
@@ -43,7 +43,6 @@ class GardenManager:
                 else:
                     regular += 1
             return regular, flowering, prize
- 
 
     def __init__(self, owner):
         self.owner = owner
@@ -60,7 +59,7 @@ class GardenManager:
             plant.grow()
 
     def report(self):
-        print(f"\n=== {self.owner}'s Garden Report ===")
+        print(f"\n=== {self.owner}'s Garden Report ===\n")
         print("Plants in garden:")
         for plant in self.plants:
             if isinstance(plant, PrizeFlower):
@@ -80,15 +79,12 @@ class GardenManager:
         total_growth = self.GardenStats.total_growth(self.plants)
         regular, flowering, prize = self.GardenStats.count_types(self.plants)
 
+        print(f"\nPlants added: {len(self.plants)},"
+              f"Total growth: {total_growth}cm")
         print(
-            f"\nPlants added: {len(self.plants)}, "
-            f"Total growth: {total_growth}cm"
-        )
-        print(
-            f"Plant types: {regular} regular, "
+            f"Plant types: {regular} regular,"
             f"{flowering} flowering, {prize} prize flowers"
         )
-
 
     def create_garden_network(cls):
         return cls.garden_count
@@ -104,6 +100,8 @@ def garden_score(plants):
         if isinstance(p, PrizeFlower):
             score += p.prize_points
     return score
+
+
 if __name__ == "__main__":
     print("=== Garden Management System Demo ===")
 
@@ -138,5 +136,6 @@ if __name__ == "__main__":
     print(f"Garden scores - Alice: {alice_score}, Bob: {bob_score}")
 
     # Total gardens managed
-    print("Total gardens managed:", GardenManager.create_garden_network(GardenManager))
-    
+
+    total_gardens = GardenManager.create_garden_network(GardenManager)
+    print("Total gardens managed:", total_gardens)

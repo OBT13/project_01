@@ -24,6 +24,5 @@ if __name__ == "__main__":
     sunflower.display_info()
     fern.display_info()
 
-
     # Display the total number of plants created
     print("\nTotal plants created: 5")
